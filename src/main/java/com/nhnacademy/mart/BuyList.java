@@ -5,15 +5,22 @@ import java.util.ArrayList;
 public class BuyList {
     private final ArrayList<Item> items = new ArrayList<>();
 
-    // TODO add 메서드 생성
+    // add 메서드 생성
     public void add(String str) {
         String[] list = str.split(" ");
+
+        if (list.length == 1) {
+            throw new IllegalArgumentException("장보기 목록이 비었습니다. (in BuyList.add())");
+        }
 
         for (int index = 0; index < list.length; index += 2) {
             String name = list[index];
             int amount = Integer.parseInt(list[index + 1]);
 
-            System.out.println("BuyList add()/ name: " + name + ", amount: " + amount);
+            if (amount < 0) {
+                throw new IllegalArgumentException("수량은 음수가 아닙니다. (in BuyList.add())");
+            }
+
             items.add(new Item(name, amount));
         }
     }

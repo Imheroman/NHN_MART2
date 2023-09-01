@@ -7,10 +7,10 @@ public class NhnMartShell {
     public static void main(String[] args) {
         NhnMart mart = new NhnMart();
         mart.prepareMart();
-        System.out.println("NHN 마트에 오신 것을 환영합니다. 사고 싶은 물건을 골라주세요.");
 
+        System.out.println("NHN 마트에 오신 것을 환영합니다. 사고 싶은 물건을 골라주세요.");
         BuyList buyList = inputBuyListFromShell();
-        
+
         Customer hero = new Customer(buyList);
 
         // 장바구니를 챙긴다.

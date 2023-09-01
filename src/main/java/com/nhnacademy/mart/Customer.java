@@ -12,6 +12,10 @@ public class Customer {
     private Basket basket;
 
     public Customer(BuyList buyList) {
+        if (buyList.getItems().isEmpty()) {
+            throw new IllegalArgumentException("쇼핑 목록이 비었습니다.");
+        }
+
         this.buyList = buyList;
     }
 
@@ -20,7 +24,7 @@ public class Customer {
         this.basket = basket;
     }
 
-    // TODO pickFoods 메서드 구현
+    // pickFoods 메서드 구현
     public void pickFoods(FoodStand foodStand) {
         ArrayList<BuyList.Item> items = buyList.getItems();
 
@@ -29,19 +33,26 @@ public class Customer {
             String name = item.getName();
             int price = 0;
 
-            for (Food food : foods) {
+            for (int index = 0; index < foods.size(); index++) {
+                Food food = foods.get(index);
+
                 if (food.getName().equals(name)) {
                     price = item.getAmount() * food.getPrice();
                     break;
+                }
+
+                if (index == foods.size() - 1) {
+                    throw new IllegalArgumentException(name + "은(는) 마트에 없는 상품입니다. (in Customer.add()) ");
                 }
             }
 
             basket.add(new Food(name, price));
             foodStand.remove(name, item.getAmount());
         }
+
     }
 
-    // TODO payTox 메서드 구현
+    // payTox 메서드 구현
     public void payTox(Counter counter) {
         counter.pay(this);
     }
