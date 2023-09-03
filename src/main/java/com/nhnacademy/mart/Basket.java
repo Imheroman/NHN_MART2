@@ -1,6 +1,7 @@
 package com.nhnacademy.mart;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Customer가 사용할 Basket을 정의한 클래스
@@ -11,6 +12,9 @@ public class Basket {
     private final ArrayList<Food> foods = new ArrayList<>();
 
     public void add(Food food) {
+        if (Objects.isNull(food)) {
+            throw new IllegalArgumentException("food가 비었습니다.");
+        }
         foods.add(food);
     }
 

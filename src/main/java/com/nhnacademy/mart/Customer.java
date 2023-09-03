@@ -22,9 +22,9 @@ public class Customer {
     public Customer(BuyList buyList) {
         if (buyList.getItems().isEmpty()) {
             throw new IllegalArgumentException("쇼핑 목록이 비었습니다.");
+        } else {
+            this.buyList = buyList;
         }
-
-        this.buyList = buyList;
     }
 
     // 장바구니 챙기기
