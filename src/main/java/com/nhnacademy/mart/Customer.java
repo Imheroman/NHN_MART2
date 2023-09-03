@@ -1,6 +1,8 @@
 package com.nhnacademy.mart;
 
 import java.util.ArrayList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 마트에 들어온 손님을 의미하는 클래스이다.
@@ -10,6 +12,8 @@ public class Customer {
     // 고객 구매 목록
     private final BuyList buyList;
     private int money = 20_000;
+    private static final Logger logger = LoggerFactory.getLogger(MyLogback.class);
+
 
     // 고객 장바구니
     private Basket basket;
@@ -21,6 +25,7 @@ public class Customer {
      */
     public Customer(BuyList buyList) {
         if (buyList.getItems().isEmpty()) {
+            logger.warn("BuyList 쇼핑 목록이 비어있음.");
             throw new IllegalArgumentException("쇼핑 목록이 비었습니다.");
         } else {
             this.buyList = buyList;
@@ -60,6 +65,7 @@ public class Customer {
                 }
 
                 if (index == foods.size() - 1) {
+                    logger.warn("Customer.pickFoods() 마트에 없는 상품");
                     throw new IllegalArgumentException(name + "은(는) 마트에 없는 상품입니다. (in Customer.add()) ");
                 }
             }

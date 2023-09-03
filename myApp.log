@@ -1,0 +1,1 @@
+2023-09-03 17:42:31,485 [main] WARN c.n.m.MyLogback [FoodStand.java:41] - FoodStand.remove() : food 수량 부족

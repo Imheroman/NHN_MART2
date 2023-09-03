@@ -1,6 +1,8 @@
 package com.nhnacademy.mart;
 
 import java.util.ArrayList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 고객의 장바구니를 담당하는 클래스
@@ -9,6 +11,7 @@ import java.util.ArrayList;
  */
 public class BuyList {
     private final ArrayList<Item> items = new ArrayList<>();
+    private static final Logger logger = LoggerFactory.getLogger(MyLogback.class);
 
     /**
      * .
@@ -24,6 +27,7 @@ public class BuyList {
         String[] list = str.split(" ");
 
         if (list.length == 1) {
+            logger.warn("BuyList.add() 실패, 장보기 목록이 비어있음");
             throw new IllegalArgumentException("장보기 목록이 비었습니다. (in BuyList.add())");
         }
 
@@ -32,6 +36,7 @@ public class BuyList {
             int amount = Integer.parseInt(list[index + 1]);
 
             if (amount < 0) {
+                logger.warn("BuyList.add() 실패, 수량이 음수로 받아짐");
                 throw new IllegalArgumentException("수량은 음수가 아닙니다. (in BuyList.add())");
             }
 

@@ -1,12 +1,15 @@
 package com.nhnacademy.mart;
 
 import java.util.ArrayList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * NhnMart의 진열대 역할을 하는 클래스이다.
  */
 public class FoodStand {
     private final ArrayList<Food> foods = new ArrayList<>();
+    private static final Logger logger = LoggerFactory.getLogger(MyLogback.class);
 
     public ArrayList<Food> getFoods() {
         return foods;
@@ -35,6 +38,7 @@ public class FoodStand {
                 }
 
                 if (index == foods.size() - 1) {
+                    logger.warn("FoodStand.remove() : food 수량 부족");
                     throw new IllegalArgumentException(name + "의 개수가 부족합니다. (in FoodStand.remove())");
                 }
             }
