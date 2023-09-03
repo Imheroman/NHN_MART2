@@ -2,8 +2,11 @@ package com.nhnacademy.mart;
 
 import java.util.ArrayList;
 
+/**
+ * Customer가 사용할 Basket을 정의한 클래스
+ * add()를 사용하여 foods에 Food를 추가한다.
+ */
 public class Basket {
-
 
     private final ArrayList<Food> foods = new ArrayList<>();
 

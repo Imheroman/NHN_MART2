@@ -1,5 +1,8 @@
 package com.nhnacademy.mart;
 
+/**
+ * 마트를 담당하는 클래스.
+ */
 public class NhnMart {
 
     private final FoodStand foodStand = new FoodStand();
@@ -9,6 +12,9 @@ public class NhnMart {
         fillFoodStand();
     }
 
+    /**
+     * 음식을 진열하는 함수이다.
+     */
     // 음식 세팅
     private void fillFoodStand() {
         for (int i = 0; i < 2; i++) {
