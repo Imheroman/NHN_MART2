@@ -1,1 +1,20 @@
 2023-09-03 17:42:31,485 [main] WARN c.n.m.MyLogback [FoodStand.java:41] - FoodStand.remove() : food 수량 부족
+2023-09-03 17:44:07,842 [main] WARN c.n.m.MyLogback [Basket.java:22] - Basket.add() 실패, food가 비어있음
+2023-09-03 17:48:59,071 [main] WARN c.n.m.MyLogback [Counter.java:32] - Counter.pay() 고객 money 부족 -> 비용이 초과되었음
+2023-09-03 17:48:59,078 [main] WARN c.n.m.MyLogback [BuyList.java:39] - BuyList.add() 실패, 수량이 음수로 받아짐
+2023-09-03 17:48:59,079 [main] WARN c.n.m.MyLogback [BuyList.java:30] - BuyList.add() 실패, 장보기 목록이 비어있음
+2023-09-03 17:48:59,082 [main] WARN c.n.m.MyLogback [FoodStand.java:41] - FoodStand.remove() : food 수량 부족
+2023-09-03 17:48:59,085 [main] WARN c.n.m.MyLogback [FoodStand.java:41] - FoodStand.remove() : food 수량 부족
+2023-09-03 17:48:59,086 [main] WARN c.n.m.MyLogback [Customer.java:28] - BuyList 쇼핑 목록이 비어있음.
+2023-09-03 17:48:59,089 [main] WARN c.n.m.MyLogback [Basket.java:22] - Basket.add() 실패, food가 비어있음
+2023-09-03 17:48:59,091 [main] WARN c.n.m.MyLogback [Food.java:31] - Food() : prcie < 0
+2023-09-03 17:48:59,092 [main] WARN c.n.m.MyLogback [Food.java:24] - Food() : name이 공백임
+2023-09-03 17:49:53,549 [main] WARN c.n.m.MyLogback [Counter.java:32] - Counter.pay() 고객 money 부족 -> 비용이 초과되었음
+2023-09-03 17:49:53,555 [main] WARN c.n.m.MyLogback [BuyList.java:39] - BuyList.add() 실패, 수량이 음수로 받아짐
+2023-09-03 17:49:53,556 [main] WARN c.n.m.MyLogback [BuyList.java:30] - BuyList.add() 실패, 장보기 목록이 비어있음
+2023-09-03 17:49:53,558 [main] WARN c.n.m.MyLogback [FoodStand.java:41] - FoodStand.remove() : food 수량 부족
+2023-09-03 17:49:53,560 [main] WARN c.n.m.MyLogback [FoodStand.java:41] - FoodStand.remove() : food 수량 부족
+2023-09-03 17:49:53,562 [main] WARN c.n.m.MyLogback [Customer.java:28] - BuyList 쇼핑 목록이 비어있음.
+2023-09-03 17:49:53,564 [main] WARN c.n.m.MyLogback [Basket.java:22] - Basket.add() 실패, food가 비어있음
+2023-09-03 17:49:53,566 [main] WARN c.n.m.MyLogback [Food.java:31] - Food() : prcie < 0
+2023-09-03 17:49:53,567 [main] WARN c.n.m.MyLogback [Food.java:24] - Food() : name이 공백임
